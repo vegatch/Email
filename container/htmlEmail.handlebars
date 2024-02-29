@@ -1,0 +1,189 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      body { 
+        color: black; 
+        font-size: 0.9rem;      
+      }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: border-box;       
+            
+        }
+        p{
+          margin: 0;
+          padding: 0;
+        }
+
+        .quotation-header{
+          border-bottom: .2rem solid navy;
+          padding: .4rem 0;
+        }
+        
+        .quotation-header
+        ,.quote-date-container
+        ,.customer-container 
+        ,.price-container{
+          margin-bottom: 1rem;
+        }
+        
+        .header .header-left {
+          text-decoration: underline;
+        }
+
+        .header .header-left,
+        .header .header-right{
+          font-size: 1.3rem;
+          font-weight: 900;
+          color: navy;
+        }
+
+        .header-right{
+          float: right;
+          text-align: right;
+        }
+        .header-first-row{
+          margin-bottom: 0.7rem;
+        }
+
+        .header-second-row p{
+          text-align: left;
+          line-height: 1.2rem;
+        }
+
+        .header-second-row .email{
+          text-decoration: none;
+          cursor: pointer;
+          list-style: none;
+        }
+
+        .quote-date-container{
+          border: .1rem solid navy;
+          padding: .5rem;
+          border-radius: .4rem;
+        }
+
+        .quote-date-container .right{
+          float: right;
+          text-align: right;
+        }        
+
+        .table-label{
+          padding: .5rem;
+          background-color: navy;
+          color: white;
+          margin-bottom: 0.7rem;
+          font-weight: 900;
+        }
+
+        .customer-contact .right
+        , .clean-item .right
+        ,.pricing .right{
+          float: right;
+        }
+
+        .total{
+          font-weight: bolder;
+          font-size: 1.1rem;
+          color: white;
+          background-color: navy;
+          padding: .5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        
+
+
+    </style>
+
+  </head>
+  <body>
+      <div class="quotation-container">
+          <div class="quotation-header">
+          <div class="header">
+            <div class="header-first-row">
+              <span class="header-left">Quotation</span> <span class="header-right">Benskya</span>
+            </div>
+            <div class="header-second-row">
+              <p>Benskya Cleaning Services</p>
+              <p>Indianapolis, IN</p>
+              <p class="email">benskyallc@gmail.com</p>
+              <p>786-247-2127</p>
+            </div>
+            
+          </div>
+          
+
+          </div>
+          <div class="quote-date-container">
+              <p>Quote #:  {{Quote_id}}</p> 
+              <span> Date:  {{Request_Date}}</span>
+              <span class="right"> Cleaning Date: {{Clean_date}}</span>
+          </div>
+          <div class="customer-container">
+            <div class="table-label"> CUSTOMER DETAILS</div>
+            <div class="customer-detail">
+                <p> {{Name}}</p>
+                <p> {{Address}}</p>
+                <div class="customer-contact"> 
+                  <span>{{Cust_email}}</span>
+                  <span class="right">{{Phone}}</span>
+                </div>
+            </div>
+          </div>
+          <div class="cleaning-container">
+            <div class="table-label"> SERVICES REQUESTED</div>
+              <div>
+                <p class=""> {{CleanDesc}} </p>
+                <div class="clean-item">
+                  <span> &#10003; Bed: {{Bedroom_num}} </span>
+                  <span class="right"> &#10003; Bath: {{Bathroom_num}}</span>
+                </div>
+                <div>
+                  <p>Special request</p>
+                </div>
+                <div class="clean-item">
+                  <span> &#10003; Oven: {{Oven_num}} </span>
+                  <span class="right"> &#10003; Fidge: {{Fridge_num}}</span>
+                </div>
+                <div class="clean-item">
+                  <span> &#10003; Window: {{Window_num}} </span>
+                  <span class="right"> &#10003; Fan: {{Fan_num}}</span>
+                </div>
+                <div class="clean-item">
+                  <span> &#10003; Blind: {{blind_num}} </span>
+                  <span class="right"> &#10003; Laundry: {{Laundry_num}}</span>
+                </div>
+              </div>
+
+  
+
+          </div>
+          <div class="price-container">
+            <div class="table-label"> PRICING AND DISCOUNT</div>
+            <div class="pricing">
+              <span>Subtotal: </span>
+              <span class="right">  {{Sub}}  </span>
+            </div>
+            <div class="pricing">
+              <span>Discount: </span>
+              <span class="right">  {{Disc}}  </span>
+            </div>
+            <div class="pricing total">
+              <span>Total: </span>
+              <span class="right">  {{Total}}  </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  </body>
+</html>
